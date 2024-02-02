@@ -1,7 +1,7 @@
-**Course Title**: React Native Development
+# React Native Development
 
-- 
-- Kevin Cunningham
+- Monday February 12th - Wednesday February 14th
+- Kevin Cunningham (https://kevincunningham.co.uk)
 - Miro link: 
 - Feedback link:
 
