@@ -1,28 +1,61 @@
-import { Text, View } from "react-native";
-export default function Review() {
+import React from "react";
+import {
+  Text,
+  View,
+  StyleSheet,
+  Dimensions,
+  Platform,
+  Pressable,
+} from "react-native";
+import Constants from "expo-constants";
+
+export default function Review({
+  author = "Unknown",
+  rating = "0/5",
+  title = "",
+  children,
+}) {
+  //   const { author, rating, title, children } = props;
+  //   let count = 0;
+  const [count, setCount] = React.useState(0);
+  let x = new Date();
+  console.log(x);
+  function handlePress() {
+    console.log(count);
+    setCount((count) => count + 1);
+    setCount((count) => count + 1);
+    setCount((count) => count + 1);
+  }
+
   return (
-    <View>
-      <Text>Book Review: "Becoming"</Text>
-      <Text>By Michelle Obama</Text>
-      <Text>Rating: 4.5/5</Text>
-      <Text>Review:</Text>
-      <Text>
-        "Becoming" is an inspiring memoir. Michelle Obama invites readers into
-        her world, chronicling the experiences that have shaped her.
-      </Text>
-      <Text>
-        From her childhood on the South Side of Chicago to her years as an
-        executive balancing the demands of motherhood and work, to her time
-        spent at the world's most famous address.
-      </Text>
-      <Text>
-        With unerring honesty and lively wit, she describes her triumphs and her
-        disappointments, both public and private.
-      </Text>
-      <Text>
-        A deeply personal reckoning of a woman of soul and substance who has
-        steadily defied expectations.
-      </Text>
+    <View style={{ flex: 1, flexDirection: "column" }}>
+      <Text></Text>
+      <Text style={styles.title}>Book Review: "{title}"</Text>
+      <Text style={styles.author}>By {author}</Text>
+      <Text>Rating: {rating}</Text>
+      <Text style={styles.heading}>Review:</Text>
+      {children}
+      <Text style={{ fontSize: 50 }}>{count}</Text>
+      <Pressable
+        onPress={handlePress}
+        style={{
+          borderRadius: 20,
+          borderWidth: 2,
+          padding: 10,
+          margin: 8,
+        }}
+      >
+        <Text>Click me</Text>
+      </Pressable>
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  title: {
+    fontWeight: Platform.OS === "android" ? "bold" : "normal",
+    fontSize: 20,
+  },
+  author: { color: "grey", marginBottom: 10 },
+  heading: { marginTop: 10 },
+});

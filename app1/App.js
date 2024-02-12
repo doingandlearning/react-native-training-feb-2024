@@ -33,7 +33,12 @@ export default function App() {
      <FlatList data={delegates} renderItem={renderItem}/> 
       
       <StatusBar style="auto" /> */}
-      <Review />
+      <Review title="WorldShip Humility" author={"RR Haywood"} rating="4.5">
+        <Text>
+          The world has been destroyed. The remnant of humantiy on 50 spaceships
+          trying to find a new home.
+        </Text>
+      </Review>
     </View>
   );
 }
