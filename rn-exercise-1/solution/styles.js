@@ -1,10 +1,11 @@
 import { StyleSheet, Platform } from "react-native";
-
+import Constants from "expo-constants";
 const getStyles = (isDarkMode) =>
   StyleSheet.create({
     container: {
       flex: 1,
       backgroundColor: isDarkMode ? "#000" : "#fff",
+      // marginTop: Platform.OS === "android" && Constants.statusBarHeight,
     },
     newsArticle: {
       padding: 20,

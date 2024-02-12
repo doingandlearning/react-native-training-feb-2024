@@ -6,11 +6,13 @@ import NewsArticle from "./components/NewsArticle";
 import getStyles from "./styles";
 import { newsData } from "./data";
 import { SafeAreaView } from "react-native";
+import Constants from "expo-constants";
 
 const App = () => {
   const [isDarkMode, setIsDarkMode] = React.useState(true);
   const styles = getStyles(isDarkMode);
-
+  const STATUS_BAR = Constants.statusBarHeight;
+  console.log(STATUS_BAR);
   const toggleDarkMode = () => {
     setIsDarkMode(!isDarkMode);
   };
