@@ -1,11 +1,12 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View, FlatList } from "react-native";
+import { StyleSheet, Text, View, FlatList, Button } from "react-native";
 import Pressables from "./components/Pressables";
 import Review from "./components/Review";
-export default function App() {
-  const hello = "Hello";
-  console.log("Hello");
+import React from "react";
+import User from "./components/User";
 
+export default function App() {
+  const [on, setOn] = React.useState(true);
   const delegates = [
     { name: "Matt", location: "MMU" },
     { name: "Andrew", location: "MMU" },
@@ -33,12 +34,16 @@ export default function App() {
      <FlatList data={delegates} renderItem={renderItem}/> 
       
       <StatusBar style="auto" /> */}
-      <Review title="WorldShip Humility" author={"RR Haywood"} rating="4.5">
-        <Text>
-          The world has been destroyed. The remnant of humantiy on 50 spaceships
-          trying to find a new home.
-        </Text>
-      </Review>
+      {/* <Button title="Hide review" onPress={() => setOn(!on)} />
+      {on && (
+        <Review title="WorldShip Humility" author={"RR Haywood"} rating="4.5">
+          <Text>
+            The world has been destroyed. The remnant of humantiy on 50
+            spaceships trying to find a new home.
+          </Text>
+        </Review>
+      )} */}
+      <User />
     </View>
   );
 }
