@@ -4,9 +4,11 @@ import useWeather from "../hooks/useWeather";
 export const WeatherContext = React.createContext();
 
 export function WeatherProvider({ children }) {
-  const { isLoading, weather } = useWeather();
+  const { isLoading, weather, getWeather, history } = useWeather();
   return (
-    <WeatherContext.Provider value={{ isLoading, weather }}>
+    <WeatherContext.Provider
+      value={{ isLoading, getWeather, weather, history }}
+    >
       {children}
     </WeatherContext.Provider>
   );
