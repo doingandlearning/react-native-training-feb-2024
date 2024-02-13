@@ -4,6 +4,8 @@ import Pressables from "./components/Pressables";
 import Review from "./components/Review";
 import React from "react";
 import User from "./components/User";
+import Movies from "./components/Movies";
+import { MovieContext, MovieProvider } from "./context/MovieContext";
 
 export default function App() {
   const [on, setOn] = React.useState(true);
@@ -25,26 +27,29 @@ export default function App() {
   }
 
   return (
-    <View style={styles.container}>
-      {/* <Text style={styles.textContent}>Welcome to MMU! {hello}
+    <MovieProvider>
+      <View style={styles.container}>
+        {/* <Text style={styles.textContent}>Welcome to MMU! {hello}
     <Text style={styles.nestedContent}>{"\n"}Other text</Text>
     </Text>
     <Pressables />
     {delegates.map(delegate => <Text key={delegate.name}>{delegate.name}</Text>)}
-     <FlatList data={delegates} renderItem={renderItem}/> 
-      
-      <StatusBar style="auto" /> */}
-      {/* <Button title="Hide review" onPress={() => setOn(!on)} />
+    <FlatList data={delegates} renderItem={renderItem}/> 
+    
+  <StatusBar style="auto" /> */}
+        {/* <Button title="Hide review" onPress={() => setOn(!on)} />
       {on && (
         <Review title="WorldShip Humility" author={"RR Haywood"} rating="4.5">
-          <Text>
-            The world has been destroyed. The remnant of humantiy on 50
-            spaceships trying to find a new home.
-          </Text>
+        <Text>
+        The world has been destroyed. The remnant of humantiy on 50
+        spaceships trying to find a new home.
+        </Text>
         </Review>
       )} */}
-      <User />
-    </View>
+        {/* <User /> */}
+        <Movies />
+      </View>
+    </MovieProvider>
   );
 }
 
