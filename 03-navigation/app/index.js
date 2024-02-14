@@ -1,5 +1,5 @@
 import { Text, View, Button, TextInput, StyleSheet } from "react-native";
-import { Link, router } from "expo-router";
+import { Link, router, Stack } from "expo-router";
 import React from "react";
 
 export default function Index() {
@@ -7,6 +7,7 @@ export default function Index() {
   const [school, setSchool] = React.useState("");
   return (
     <View>
+      <Stack.Screen options={{ headerShown: false }} />
       <Text>The index page!</Text>
       <Link href="/about" asChild>
         <Button title="About" />
