@@ -3,7 +3,7 @@
 - Monday February 12th - Wednesday February 14th
 - Kevin Cunningham (https://kevincunningham.co.uk)
 - Miro link: https://miro.com/app/board/uXjVNtovXAM=/?share_link_id=713859135128
-- Feedback link:
+- Feedback link: https://forms.microsoft.com/e/yj2gETunXa
 
 # Pre-course
 
