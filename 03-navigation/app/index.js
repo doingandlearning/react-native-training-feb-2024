@@ -7,7 +7,7 @@ export default function Index() {
   const [school, setSchool] = React.useState("");
   return (
     <View>
-      <Stack.Screen options={{ headerShown: false }} />
+      {/* <Stack.Screen options={{ headerShown: false }} /> */}
       <Text>The index page!</Text>
       <Link href="/about" asChild>
         <Button title="About" />
@@ -38,4 +38,5 @@ const styles = StyleSheet.create({
     padding: 10,
     width: 150,
   },
+  container: {},
 });
