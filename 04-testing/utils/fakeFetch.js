@@ -1,5 +1,5 @@
 export async function fakeFetch(url) {
-  await new Promise((resolve) => setTimeout(() => resolve(), 200));
+  await new Promise((resolve) => setTimeout(() => resolve(), 10));
   if (url === "http://error.com") {
     throw new Error("network error");
   }

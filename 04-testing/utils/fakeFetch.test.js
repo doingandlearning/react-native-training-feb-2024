@@ -5,7 +5,6 @@ describe("fakeFetch happy patch", () => {
     const result = await fakeFetch("https://google.com");
 
     expect(Buffer.isBuffer(result)).toBe(true);
-    console.log(result);
   });
 });
 
