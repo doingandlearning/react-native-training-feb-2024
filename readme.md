@@ -118,3 +118,5 @@ If you make a mistake
 ```
 npx expo prebuild --clean
 ```
+
+https://gist.github.com/doingandlearning/fcff23367e5bf034b54a5abfb342d523
