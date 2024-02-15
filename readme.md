@@ -9,7 +9,8 @@
 
 The only thing I can remember promising was a DataFetcherComponent - if I've forgotten something else let me know. Contact me from the website above.
 
-- [Data Fetcher Component](./04-testing/components/DataFetcherComponent/index.js) - I've added a component with hook and test here. 
+- I've added some [mocking notes](./mocking) with an example here [Data Fetcher Component](./04-testing/components/DataFetcherComponent/index.js).
+
 
 # Pre-course
 
