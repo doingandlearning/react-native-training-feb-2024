@@ -5,6 +5,12 @@
 - Miro link: https://miro.com/app/board/uXjVNtovXAM=/?share_link_id=713859135128
 - Feedback link: https://forms.microsoft.com/e/yj2gETunXa
 
+# Post-course Updates
+
+The only thing I can remember promising was a DataFetcherComponent - if I've forgotten something else let me know. Contact me from the website above.
+
+- [Data Fetcher Component](./04-testing/components/DataFetcherComponent/index.js) - I've added a component with hook and test here. 
+
 # Pre-course
 
 There are two bits of setup it would be great to have run through before we kick the course off.
